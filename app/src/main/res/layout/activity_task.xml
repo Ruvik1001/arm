@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Task">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg">
+
+
+        <TextView
+            android:id="@+id/task_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/btn"
+            android:gravity="center"
+            android:minHeight="20dp"
+            android:text="TextView"
+            android:textSize="@dimen/h1"
+            android:layout_centerHorizontal="true"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/spec_liner"
+            android:layout_below="@id/task_title"
+            android:layout_marginTop="10dp">
+
+            <TableLayout
+                android:id="@+id/table_disc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:minHeight="30dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/date_to"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:minWidth="110dp"
+                        android:text="text"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/h3" />
+
+                    <Spinner
+                        android:id="@+id/spin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:minWidth="110dp"
+                        android:scrollbarSize="@dimen/h3" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp">
+
+                    <TextView
+                        android:id="@+id/worker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minWidth="120dp"
+                        android:textColor="@color/black" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp">
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/spec_liner"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_above="@id/title_comment">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:id="@+id/spec"/>
+                </HorizontalScrollView>
+            </ScrollView>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/title_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/h2"
+            android:text="Комментарии"
+            android:gravity="center"
+            android:minHeight="20dp"
+            android:layout_above="@id/msg_show"/>
+
+        <ScrollView
+            android:id="@+id/msg_show"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_above="@id/edit_msg">
+
+
+            <LinearLayout
+                android:id="@+id/msg_liner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:minHeight="20dp"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <EditText
+            android:id="@+id/edit_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/h3"
+            android:textColor="@color/black"
+            android:layout_alignParentBottom="true"
+            android:minHeight="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_toStartOf="@id/btn_send"/>
+
+        <ImageButton
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_send_24"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"/>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

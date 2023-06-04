@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">АСДОД</string>
+
+    <string-array name="status_spin">
+        <item>Создан</item>
+        <item>В работе</item>
+        <item>Приостоновлен</item>
+        <item>Завершён</item>
+        <item>Архив</item>
+        <item>Удалён</item>
+    </string-array>
+</resources>
