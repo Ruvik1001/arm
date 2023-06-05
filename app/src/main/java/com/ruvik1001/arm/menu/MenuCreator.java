@@ -16,6 +16,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 import com.ruvik1001.arm.About;
 import com.ruvik1001.arm.Chat;
+import com.ruvik1001.arm.Employees;
 import com.ruvik1001.arm.MainMenu;
 import com.ruvik1001.arm.MenuSettings;
 import com.ruvik1001.arm.Profile;
@@ -51,10 +52,6 @@ public class MenuCreator {
                 // Обработка нажатия на пункт меню
                 Intent intent = null;
                 switch (menuItem.getItemId()) {
-                    case R.id.menu_home:
-                        // Действие при выборе пункта "Главная"
-                        break;
-
                     case R.id.menu_tasks:
                         if (context.getClass().equals(MainMenu.class))
                             break;
@@ -70,7 +67,10 @@ public class MenuCreator {
                         break;
 
                     case R.id.menu_employees:
-                        // Действие при выборе пункта "Сотрудники"
+                        if (context.getClass().equals(Employees.class))
+                            break;
+                        intent = new Intent(context, Employees.class);
+                        context.startActivity(intent);
                         break;
 
                     case R.id.menu_profile:
@@ -93,7 +93,6 @@ public class MenuCreator {
                         intent = new Intent(context, About.class);
                         context.startActivity(intent);
                         break;
-
                 }
 
                 // Закрытие меню после выбора пункта

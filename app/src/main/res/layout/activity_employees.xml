@@ -40,6 +40,19 @@
             android:contentDescription="Menu Button"
             android:src="@drawable/ic_menu" />
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title"
+            android:layout_margin="15dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:divider="@drawable/empty_tall_divider"
+                android:showDividers="middle"
+                android:id="@+id/content_empl"/>
+        </ScrollView>
 
 
     </RelativeLayout>

@@ -17,6 +17,9 @@
         android:theme="@style/Theme.Arm"
         tools:targetApi="31">
         <activity
+            android:name=".EmployeeCard"
+            android:exported="false" />
+        <activity
             android:name=".Employees"
             android:exported="false" />
         <activity
