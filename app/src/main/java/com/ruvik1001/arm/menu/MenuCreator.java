@@ -14,8 +14,11 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.ruvik1001.arm.About;
 import com.ruvik1001.arm.Chat;
 import com.ruvik1001.arm.MainMenu;
+import com.ruvik1001.arm.MenuSettings;
+import com.ruvik1001.arm.Profile;
 import com.ruvik1001.arm.R;
 
 public class MenuCreator {
@@ -71,15 +74,24 @@ public class MenuCreator {
                         break;
 
                     case R.id.menu_profile:
-                        // Действие при выборе пункта "Профиль"
+                        if (context.getClass().equals(Profile.class))
+                            break;
+                        intent = new Intent(context, Profile.class);
+                        context.startActivity(intent);
                         break;
 
                     case R.id.menu_settings:
-                        // Действие при выборе пункта "Настройки"
+                        if (context.getClass().equals(MenuSettings.class))
+                            break;
+                        intent = new Intent(context, MenuSettings.class);
+                        context.startActivity(intent);
                         break;
 
                     case R.id.menu_about:
-                        // Действие при выборе пункта "О нас"
+                        if (context.getClass().equals(About.class))
+                            break;
+                        intent = new Intent(context, About.class);
+                        context.startActivity(intent);
                         break;
 
                 }

@@ -5,7 +5,7 @@
     android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Chat">
+    tools:context=".About">
 
     <!-- Основной контент -->
     <RelativeLayout
@@ -22,7 +22,7 @@
             android:layout_centerHorizontal="true"
             android:background="@color/btn"
             android:gravity="center"
-            android:text="Чат сотрудников"
+            android:text="О приложении"
             android:textSize="@dimen/h1" />
 
 
@@ -46,39 +46,18 @@
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@id/edit_msg">
+            android:layout_height="match_parent">
 
 
-            <LinearLayout
-                android:id="@+id/msg_liner"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/text_about"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:minHeight="20dp"
-                android:orientation="vertical" />
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:textSize="@dimen/h2"/>
         </ScrollView>
 
-        <EditText
-            android:id="@+id/edit_msg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/h3"
-            android:textColor="@color/black"
-            android:layout_alignParentBottom="true"
-            android:minHeight="30dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_toStartOf="@id/btn_send"/>
 
-        <ImageButton
-            android:id="@+id/btn_send"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_send_24"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_margin="20dp"/>
 
     </RelativeLayout>
 
